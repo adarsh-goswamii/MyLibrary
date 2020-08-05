@@ -4,6 +4,15 @@ public class Books
 {
     private String name, author, shortDesc, longDesc, imageUrl;
     private int pages, id;
+    private boolean isExpanded;
+
+    public boolean isExpanded() {
+        return isExpanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
 
     public Books(String name, String author, String shortDesc, String longDesc, String imageUrl, int pages, int id) {
         this.name = name;
@@ -13,6 +22,7 @@ public class Books
         this.imageUrl = imageUrl;
         this.pages = pages;
         this.id = id;
+        isExpanded= false;
     }
 
     public String getName() {

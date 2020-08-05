@@ -3,16 +3,20 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="7dp"
-    app:cardCornerRadius="7dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
     android:id="@+id/parent">
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:id="@+id/collapsedRelLayout">
 
         <ImageView
-            android:layout_width="130dp"
+            android:layout_width="200dp"
             android:layout_height="150dp"
             android:src="@mipmap/ic_launcher_round"
             android:id="@+id/imgBook"/>
@@ -22,12 +26,57 @@
             android:layout_height="wrap_content"
             android:text="Book name"
             android:layout_below="@+id/imgBook"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="7dp"
             android:textSize="16sp"
             android:fontFamily="@font/aladin"
             android:id="@+id/txtName"
             />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow"
+            android:layout_below="@id/imgBook"
+            android:layout_alignParentRight="true"
+            android:id="@+id/downArrow"/>
     </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expand"
+            android:visibility="gone"
+            android:layout_below="@+id/collapsedRelLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AUTHOR:"
+                android:id="@+id/Author"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textAuthor"
+                android:layout_below="@+id/Author"
+                android:text="Hello ji"
+                android:textStyle="italic" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ShortDesc"
+                android:id="@+id/shortDesc"
+                android:layout_below="@+id/textAuthor"
+                android:textStyle="italic"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_up_arrow"
+                android:layout_below="@+id/textAuthor"
+                android:id="@+id/upArrow"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>

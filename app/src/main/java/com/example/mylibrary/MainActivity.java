@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         wishList= findViewById(R.id.btnWishlist);
         favourite= findViewById(R.id.btnFav);
         about= findViewById(R.id.btnAbout);
-
+        Utils.getInstance();
         allBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

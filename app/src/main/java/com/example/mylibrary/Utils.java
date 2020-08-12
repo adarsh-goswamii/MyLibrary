@@ -79,11 +79,33 @@ public class Utils
     {
         return alreadyRead.add(book);
     }
+
     public boolean addToWishList(Books book)
     {
         return wishList.add(book);
     }
+
     public boolean addToFav(Books book){
         return favBooks.add(book);
+    }
+
+    public boolean removeFromWishList(Books book)
+    {
+        return wishList.remove(book);
+    }
+
+    public boolean removeFromFav(Books book)
+    {
+        return favBooks.remove(book);
+    }
+
+    public boolean removeFromAlreadyRead(Books book)
+    {
+        return alreadyRead.remove(book);
+    }
+
+    public boolean removeFromCurrentlyReading(Books book)
+    {
+        return currently.remove(book);
     }
 }

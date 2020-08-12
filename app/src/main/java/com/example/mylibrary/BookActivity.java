@@ -89,7 +89,7 @@ public class BookActivity extends AppCompatActivity {
                         fav.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                if(Utils.getInstance().addToWishList(bookIncoming))
+                                if(Utils.getInstance().addToFav(bookIncoming))
                                 {
                                     Toast.makeText(BookActivity.this, "Book Successfully Added", Toast.LENGTH_SHORT).show();
                                     Intent intent= new Intent(BookActivity.this, FavouriteActivity.class);

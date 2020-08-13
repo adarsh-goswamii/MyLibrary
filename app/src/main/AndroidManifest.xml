@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookActivity"></activity>
+        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".BookActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".FavouriteActivity" />
         <activity android:name=".WishListActivity" />

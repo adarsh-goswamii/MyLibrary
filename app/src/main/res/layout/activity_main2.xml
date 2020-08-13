@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/library"
+    android:foreground="@color/black_tranparent"
+    tools:context=".MainActivity2">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/logo"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/logo"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textMyLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:fontFamily="@font/lemon"
+        android:text="My Library"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAll"
+        android:layout_below="@+id/textMyLibrary"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="All Books"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCurrentlyReading"
+        android:layout_below="@+id/btnAll"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="Currently Reading"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAlreadyRead"
+        android:layout_below="@+id/btnCurrentlyReading"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="Already Read"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnWishlist"
+        android:layout_below="@+id/btnAlreadyRead"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="WishList"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFav"
+        android:layout_below="@+id/btnWishlist"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="Favourite"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAbout"
+        android:layout_below="@+id/btnFav"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="About"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/lemon"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:fontFamily="@font/lemon"
+        android:text="Designed By: Adarsh Goswami" />
+
+
+</RelativeLayout>

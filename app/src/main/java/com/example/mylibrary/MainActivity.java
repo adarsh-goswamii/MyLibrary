@@ -1,7 +1,9 @@
 package com.example.mylibrary;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -66,8 +68,25 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
+                AlertDialog.Builder builder =new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("My Library");
+                builder.setMessage("Designed and Developed by Adarsh Goswami.\n To check out more awesome stuffs from the designer select visit");
+                builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+                builder.setPositiveButton("Visit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent=new Intent(MainActivity.this, AboutActivity.class);
+                        intent.putExtra("url", "https://github.com/Adarsh-Goswamii");
+                        startActivity(intent);
+                    }
+                });
+                builder.create().show();
             }
         });
     }

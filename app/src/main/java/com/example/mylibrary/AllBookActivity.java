@@ -22,6 +22,6 @@ public class AllBookActivity extends AppCompatActivity {
         bookRecView= findViewById(R.id.booksRecView);
         bookRecView.setAdapter(adapter);
         bookRecView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setBooks(Utils.getInstance().getAllBooks());
+        adapter.setBooks(Utils.getInstance(AllBookActivity.this).getAllBooks());
     }
 }

@@ -18,13 +18,13 @@ public class CurrentlyReadingActivity extends AppCompatActivity {
         BooksRecViewAdapter adapter=new BooksRecViewAdapter(this, "CurrentlyReading");
         recView.setAdapter(adapter);
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setBooks(Utils.getInstance().getCurrently());
+        adapter.setBooks(Utils.getInstance(CurrentlyReadingActivity.this).getCurrently());
     }
 
     @Override
     public void onBackPressed()
     {
-        Intent intent=new Intent(CurrentlyReadingActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        Intent intent=new Intent(CurrentlyReadingActivity.this, MainActivity2.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }

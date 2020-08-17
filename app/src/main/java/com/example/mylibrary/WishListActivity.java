@@ -18,12 +18,12 @@ public class WishListActivity extends AppCompatActivity {
         BooksRecViewAdapter adapter=new BooksRecViewAdapter(this, "WishList");
         recView.setAdapter(adapter);
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setBooks(Utils.getInstance().getWishList());
+        adapter.setBooks(Utils.getInstance(WishListActivity.this).getWishList());
     }
 
     public void onBackPressed()
     {
-        Intent intent= new Intent(WishListActivity.this, MainActivity.class)
+        Intent intent= new Intent(WishListActivity.this, MainActivity2.class)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

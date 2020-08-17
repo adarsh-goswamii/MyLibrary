@@ -18,12 +18,12 @@ public class FavouriteActivity extends AppCompatActivity {
         BooksRecViewAdapter adapter=new BooksRecViewAdapter(this, "Favourite");
         recView.setAdapter(adapter);
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setBooks(Utils.getInstance().getFavBooks());
+        adapter.setBooks(Utils.getInstance(FavouriteActivity.this).getFavBooks());
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent=new Intent(FavouriteActivity.this, MainActivity.class);
+        Intent intent=new Intent(FavouriteActivity.this, MainActivity2.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

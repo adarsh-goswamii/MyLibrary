@@ -90,7 +90,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String name= books.get(position).getName();
-                            if(Utils.getInstance().removeFromAlreadyRead(books.get(position)))
+                            if(Utils.getInstance(mContext).removeFromAlreadyRead(books.get(position)))
                             {
                                 Toast.makeText(mContext,"Book "+name+" deleted successfully.", Toast.LENGTH_SHORT).show();
                                 notifyDataSetChanged();
@@ -123,7 +123,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String name= books.get(position).getName();
-                            if(Utils.getInstance().removeFromWishList(books.get(position)))
+                            if(Utils.getInstance(mContext).removeFromWishList(books.get(position)))
                             {
                                 Toast.makeText(mContext,"Book "+name+" deleted successfully.", Toast.LENGTH_SHORT).show();
                                 notifyDataSetChanged();
@@ -155,7 +155,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String name= books.get(position).getName();
-                            if(Utils.getInstance().removeFromFav(books.get(position)))
+                            if(Utils.getInstance(mContext).removeFromFav(books.get(position)))
                             {
                                 Toast.makeText(mContext,"Book "+name+" deleted successfully.", Toast.LENGTH_SHORT).show();
                                 notifyDataSetChanged();
@@ -187,7 +187,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String name= books.get(position).getName();
-                            if(Utils.getInstance().removeFromCurrentlyReading(books.get(position)))
+                            if(Utils.getInstance(mContext).removeFromCurrentlyReading(books.get(position)))
                             {
                                 Toast.makeText(mContext,"Book "+name+" deleted successfully.", Toast.LENGTH_SHORT).show();
                                 notifyDataSetChanged();

@@ -15,4 +15,3 @@ Android Studio.
 * [Material.io](https://material.io/) 
 * [Glide](https://github.com/bumptech/glide) - Used to load images from internet
 * [Gson](https://github.com/google/gson) - Used to convert Objects into Json format for ease of storing data.
-* Sqlite Database - Used to store data for application.
